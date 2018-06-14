@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>摄影交流</title>
+    <link rel="stylesheet" href="../CSS/common.css" />
+    <link rel="stylesheet" href="../CSS/index1.css" />
+    <link rel="Shortcut Icon" href="../images/1.jpg" />
+    
+    <!-- 弹出框 -->
+    <!-- <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $(function() {
+        $('.right-contain-img .right-img1:first, .right-contain-button span:first, .title p:first').addClass('active');
+        var index = 1, // 设置初始index为1  避免定时器第一次调用index=0没有任何动作多用3秒
+            len = $('.right-contain-img .right-img1').length;
+
+        function autoPlay() {
+            // 注意：index++是指执行完后再自增1，所以index=0时，eq(index++)最开始是eq(0);
+            $('.right-contain-img .right-img1').removeClass('active').eq(index++).addClass('active');
+            // 此时index已经+1了
+            $('.title p').removeClass('active').eq(index - 1).addClass('active');
+            $('.right-contain-button span').removeClass('active').eq(index - 1).addClass('active');
+            // 当index自增到len,也就是超出图片的数量时，归零.
+            if (index == len) {
+                index = 0;
+            }
+        }
+        // 定时器会循环触发函数autoPlay
+        loop = setInterval(autoPlay, 4500);
+        $('.right-contain-button span').hover(
+            function() {
+                index = $(this).index();
+                autoPlay();
+                clearInterval(loop); // 清楚定时器，停止自动轮播
+            },
+            function() {
+                loop = setInterval(autoPlay, 4500); // 启动定时器
+            });
+    });
+    </script>
+
+<!-- <script src="../js/jquery-3.2.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+ -->
+</head>
+<body>
+    <div>
+    
+        <div class="left-list">
+            <div class="left-content">
+                <div class="left-top">
+                    <a href="index1.html"><img src="../images/1.png" alt="" /></a>
+                </div>
+                <div class="left-middle">
+                    <div class="left-middle-contain">
+                        <div class="contain contain-one-wo">
+                            <a href="">我</a>
+                            <div class="containb"></div>
+                            <div class="contain-rightpull-menu contain-rightpull-show1">
+                                <div class="right-pull-menu menu-3"><a href="personal.php" >个人主页</a></div>
+                                <div class="right-pull-menu menu-0"><a href="javascript:void(0)" onclick="document.getElementById('div1').style.display='block';">登录</a></div>
+                                <div class="right-pull-menu menu-2"><a href="javascript:void(0)" onclick="document.getElementById('div2').style.display='block';">注册</a></div>
+                                <div class="right-pull-menu menu-3"><a href="doAdminAction.php?act=logout">退出</a></div>
+                            </div>
+                        </div>
+                        <div class="contain "><a href="index1.html">首页</a><div class="containb"></div></div>
+                        <!-- <div class="contain "><a href="discuss.php">讨论区</a><div class="containb"></div></div> -->
+                        <div class="contain contain-two-zhanshi">
+                            <a href="show.php">作品展示</a>
+                            <div class="containb"></div>
+                            <div class="contain-rightpull-menu contain-rightpull-show2">
+                                <div class="right-pull-menu menu-1"><a href="home.html">人物</a></div>
+                                <div class="right-pull-menu menu-1"><a href="city.html">城市</a></div>
+                                <div class="right-pull-menu menu-1"><a href="nature.html">自然</a></div>
+                            </div>
+                        </div>
+                        <div class="contain "><a href="sheying.html">摄影名人</a><div class="containb"></div></div>
+                        <div class="contain "><a href="">画廊</a><div class="containb"></div></div>
+                        <div class="contain "><a href="">画廊</a><div class="containb"></div></div>
+                    </div>
+                </div>
+
+                <!-- 音乐的插入 -->
+                <div id="wrapper">
+                  <audio preload="auto" controls loop>
+                    <source src="../Colbie Caillat-Try.mp3" />
+                  </audio>
+                </div>
+                
+                <script>
+                   $( function(){
+                      $( 'audio' ).audioPlayer();
+                   });
+                </script>
+                
+
+            </div>
+        </div>
+   
+        <div class="menu-hider">
+            <div class="menu-background"></div>
+            <!-- <div class="menu-iconarrow"><button class="btn"></button></div> -->
+        </div>
+
+        <div class="right-roll"id="right-roll"> 
+            <div class="right-contain-img"style="left:-100%;"id="right-contain-img">
+                
+                <!-- <div class="right-img1"style="background-image:url(../images/家.jpg);"></div> -->
+                <div class="right-img1"style="background-image:url(../images/personal/0.jpg);"></div>
+                <!-- <div class="right-img1"style="background-image:url(../images/风景.jpg);"></div> -->
+                <div class="right-img1"style="background-image:url(../images/500px238246069.jpg);"></div>
+                <!-- <div class="right-img1"style="background-image:url(../images/城市.jpg);"></div> -->
+                <div class="right-img1"style="background-image:url(../images/timg.jpg);"></div>
+                
+            </div>
+            <div class="title">
+                <a href="home.html"><p>人物</p></a>
+                <!-- <p>人活着总是有趣的，时间留不住的美好就让摄影来留吧</p> -->
+                <a href="nature.html"><p>自然</p></a>
+                <a href="city.html"><p>城市</p></a>
+            </div>
+
+            <div class="right-contain-button"id="buttons">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                
+                
+            </div>
+            <!-- <a href="javascript:;"id="next" class="arrow"></a>
+            <a href="javascript:;"id="prev" class="arrow"></a> -->
+        </div>
+    </div>
+    
+
+    <div id="div1">
+       <div id="login">
+        <div class="biaoti">
+            <div class="biaoti-content">
+                <div class="xinxi">
+                    <a href="javascript:void(0)" onclick="document.getElementById('div1').style.display='block'; document.getElementById('div2').style.display='none';"><b style="color:#FFF">登录</b></a>
+                </div>
+                <div class="xiugai">
+                    <a href="javascript:void(0)" onclick="document.getElementById('div1').style.display='none'; document.getElementById('div2').style.display='block';"><b style="color:#FFF">注册</b></a>
+                </div>
+            </div>
+        </div>
+        <form action="doLogin.php" method="post">
+        <div id="neirong">
+            <ul>
+                <li><span>用户名：</span><input class="input1" type="text" name="username" required autofocus="autofocus" /></li>
+                <li><span style="margin-left:0px;letter-spacing:24px;">密码</span><span style="margin-left:-24px;">:</span><input style="margin-left:12px;"class="input1" type="password" name="password" required /></li>
+                <li style="margin-top:-7px;"><span style="display:inline-block;margin-top:45px;">验证码：</span><input class="yan" name="verify" required >
+                    <img style="width:80px;height:35px;margin:-15px 0px -6px 100px;" src="getVerify.php">
+                </li>
+            </ul>
+            <div ><a href="javascript:void(0)" onclick="document.getElementById('div1').style.display='none';"><button type="submit" id="btn">确认登录</button></a></div>
+        </div>
+        </form>
+       </div>
+    </div>
+    <div id="div2">
+        <div class="biaoti1">
+        <div class="biaoti1-content">
+          <div class="xinxi1">
+              <a href="javascript:void(0)" onclick="document.getElementById('div1').style.display='block'; document.getElementById('div2').style.display='none';"><b style="color:#FFF">登录</b></a>
+          </div>
+          <div class="xiugai1">
+              <a href="javascript:void(0)" onclick="document.getElementById('div1').style.display='none'; document.getElementById('div2').style.display='block';"><b style="color:#FFF">注册</b></a>
+          </div>
+          </div>
+          </div>
+          <form action="doAdminAction.php?act=addAdmin" method="post">
+          <div id="zhunei">
+            <ul>
+                <li><span>账号：</span><input type="text" name="username" required autofocus="autofocus" /></li>
+                <li><span>密码：</span><input type="password" name="password" required placeholder="6~12位数字或字母"/></li>
+                <li><span>电话：</span><input type="text" name="telephone" required/></li>
+            </ul>
+            <div ><a href="javascript:void(0)" onclick="document.getElementById('div2').style.display='none';"><button type="submit" id="btn">确认注册</button></a></div>
+        </div>
+        </form>
+      
+    </div>
+</body>
+</html>
+<script src="../js/audioplayer.js"></script>
+
+
+
+<!--弹出框 -->
+ <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content"style="background-color:white;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                
+                <div class="portrait"style="width:100%;height:70px;"><!-- 肖像 -->
+                    <!-- <div style="width:70px;height:70px;border:1px solid black;border-radius:50%;margin:0 auto;">
+                        <img style="width:70px;height:70px;border-radius:50%;"src="../images/0eed342fb1923c08e3d27ad1679352441e32dcee1f39a-WyvfKr_fw658.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body"style="margin:0 auto;text-align:center;">
+                百草园用户欢迎来到Focus摄影
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                
+            </div>
+        </div>
+    </div>
+</div> --> -->
+
+
+
+
+
+
+<!-- <script type="text/javascript">
+    var Pop=document.createElement("div");
+        Pop.id="lie_popupxiugai";
+        Pop.innerHTML="<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'style='background-color:white;'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><div class='portrait'style='width:100%;height:70px;'><div style='width:70px;height:70px;border:1px solid black;border-radius:50%;margin:0 auto;'><img style='width:70px;height:70px;border-radius:50%;'src='../images/0eed342fb1923c08e3d27ad1679352441e32dcee1f39a-WyvfKr_fw658.jpg' alt='' /></div></div></div><div class='modal-body'style='margin:0 auto;text-align:center;'>百草园用户欢迎来到Focus摄影</div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>关闭</button></div></div></div>"
+</script> -->

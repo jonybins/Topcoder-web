@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jQuery加css3动态点赞</title>
+    <!--样式表开始-->
+    <link type="text/css" rel="stylesheet" href="../../css/Bbs_css/demo.css"/>
+    <!--样式表结束-->
+    <script type="text/javascript" src="../../js/Bbs_js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="praise">
+    <span id="praise"><img src="../../images/Bbs_images/zan.png" id="praise-img"/></span>
+    <span id="praise-txt">1455</span>
+    <span id="add-num"><em>+1</em></span>
+</div>
+<!--动态点赞结束-->
+<script>
+    /* @author:Romey
+     * 动态点赞
+     * 此效果包含css3，部分浏览器不兼容（如：IE10以下的版本）
+     */
+    $(function () {
+        $("#praise").click(function () {
+            var praise_img = $("#praise-img");
+            var text_box = $("#add-num");
+            var praise_txt = $("#praise-txt");
+            var num = parseInt(praise_txt.text());
+            if (praise_img.attr("src") == ("../../images/Bbs_images/yizan.png")) {
+                $(this).html("<img src='../../images/Bbs_images/zan.png' id='praise-img' class='animation' />");
+                praise_txt.removeClass("hover");
+                text_box.show().html("<em class='add-animation'>-1</em>");
+                $(".add-animation").removeClass("hover");
+                num -= 1;
+                praise_txt.text(num)
+            } else {
+                $(this).html("<img src='../../images/Bbs_images/yizan.png' id='praise-img' class='animation' />");
+                praise_txt.addClass("hover");
+                text_box.show().html("<em class='add-animation'>+1</em>");
+                $(".add-animation").addClass("hover");
+                num += 1;
+                praise_txt.text(num)
+            }
+        });
+    })
+</script>
+</body>
+</html>

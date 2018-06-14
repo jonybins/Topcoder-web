@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+<FilesMatch ".(gif|jpg|jpeg|png|ico)$">
+Header set Cache-Control "max-age=3600"
+</FilesMatch>
+order deny,allow
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?topcoder.group(/)?.*$     [NC]
+RewriteRule .*\.(gif|jpg|jpeg|bmp|png)$ http://www.topcoder.group/1519292142491157.jpg [R,NC,L]

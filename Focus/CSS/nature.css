@@ -1,0 +1,72 @@
+/* 
+* @Author: anchen
+* @Date:   2017-11-22 16:05:05
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-12-07 20:14:11
+*/
+*{margin:0px;padding:0px;}
+/*body{height:3000px;}*/
+.top{width:100%;height:40px;background-color:#D00355;}
+.top span{line-height:40px;color:#FFF;font-weight:bold;font-family:微软雅黑;}
+.logobar{width:100%;height:82px;margin-top:20px;position:relative;}
+.logobar_img{position:absolute;left:188px;}
+.user{width:100px;height:80px;/*background-color:red;*/position:absolute;left:1050px;}
+.logobar_text{font-family:微软雅黑;color:#333;position:absolute;top:40px;left:297px;}
+/*导航栏*/
+.nav{width:1000px;height:50px;background-color:#ddd;margin:0 auto;margin-top:20px;border-radius:3px;border:solid #ccc 1px;}
+.nav_li{width:125px;height:52px;float:left;}
+.nav_li:hover{background-color:#D00355;}
+.nav_text{text-align:center;line-height:50px;font-family:微软雅黑;font-size:16px;color:#333;}
+/*div1*/
+/*.div1{background-color:#333;}*/
+.hr1{color:#D00355;}
+.tit{font-size:34px;font-family:"宋体";margin-top:20px;line-height:60px;}
+.div_sm1{width:45%;height:400px;background-color:red;float:left;margin-top:30px;margin-left:5%;position:relative;transition:1s;overflow:hidden;}
+.div_sm2{width:45%;height:400px;background-color:black;
+float:left;margin-top:30px;position:relative;overflow:hidden;}
+.div_sm3{width:45%;height:400px;background-color:yellow;float:left;margin-left:5%;overflow:hidden;position:relative;}
+.div_sm4{width:45%;height:400px;background-color:pink;float:left;overflow:hidden;position:relative;}
+.img01{width:100%;height:400px;transition:0.5s;}
+.img02{width:100%;height:400px;transition:0.5s;}
+.border1{width:30%;height:40px;border:#FFF solid 2px;position:absolute;top:45%;left:35%;text-align:center;display:none;}
+/*border1*/
+.border1 span{color:#FFF;font-size:20px;line-height:40px;}
+.div_sm1:hover .border1{display:block;}
+.div_sm1 img:hover{transform:scale(1.07);transition:0.5s;}
+/*border2*/
+.border2{width:30%;height:40px;border:#FFF solid 2px;position:absolute;top:45%;left:35%;text-align:center;display:none;}
+.border2 span{color:#FFF;font-size:20px;line-height:40px;}
+.div_sm2:hover .border2{display:block;}
+.div_sm2 img:hover{transform:scale(1.07);transition:0.5s;}
+/*border3*/
+.img03{width:100%;height:400px;transition:0.5s;}
+.border3{width:30%;height:40px;border:#FFF solid 2px;position:absolute;top:45%;left:35%;text-align:center;display:none;}
+.border3 span{color:#FFF;font-size:20px;line-height:40px;}
+.div_sm3:hover .border3{display:block;}
+.div_sm3 img:hover{transform:scale(1.07);transition:0.5s;}
+/*border4*/
+.img04{width:100%;height:400px;transition:0.5s;}
+.border4{width:30%;height:40px;border:#FFF solid 2px;position:absolute;top:45%;left:35%;text-align:center;display:none;}
+.border4 span{color:#FFF;font-size:20px;line-height:40px;}
+.div_sm4:hover .border4{display:block;}
+.div_sm4 img:hover{transform:scale(1.07);transition:0.5s;}
+/*div2*/
+.div2{width:100%;height:1000px;/*background-color:#333;*/margin-top:30px;position:relative;top:800px;}
+.div2_tit{font-size:50px;color:#D00355;position:absolute;left:38%;top:3%;font-weight:bold;}
+.shang{width:250px;height:250px;background-color:Indigo;position:absolute;top:13%;left:40%;border-radius:5px;color:#FFF;transition: ease-in 0.2s;}
+.zuo{width:250px;height:250px;background-color:Indigo;position:absolute;top:43%;left:18%;border-radius:5px;color:#FFF;transition: ease-in 0.2s;}
+.zhong{width:250px;height:250px;background-color:Indigo;position:absolute;top:43%;left:40%;background-image:url(../images/zi07.jpg);border-radius:5px;}
+.xia{width:250px;height:250px;background-color:Indigo;position:absolute;top:73%;left:40%;border-radius:5px;color:#FFF;transition: ease-in 0.2s;}
+.you{width:250px;height:250px;background-color:Indigo;position:absolute;top:43%;left:62%;border-radius:5px;color:#FFF;transition: ease-in 0.2s;}
+.shang span{font-size:20px;/*color:#FFF;*/font-family:"宋体";padding:5px;font-weight:bold;}
+.zuo span{font-size:20px;/*color:#FFF;*/font-family:"宋体";padding:5px;font-weight:bold;}
+.you span{font-size:20px;/*color:#FFF;*/font-family:"宋体";padding:5px;font-weight:bold;}
+.xia span{font-size:20px;/*color:#FFF;*/font-family:"宋体";padding:5px;font-weight:bold;}
+.shang:hover{background-color:#333;color:red;transition: ease-in 0.2s;}
+.zuo:hover{background-color:#333;color:red;transition: ease-in 0.2s;}
+.you:hover{background-color:#333;color:red;transition: ease-in 0.2s;}
+.xia:hover{background-color:#333;color:red;transition: ease-in 0.2s;}
+
+.jian span{ position:absolute; top:90%; right:2%; z-index:50; position:fixed;}
+.jian img{ opacity:0.8; border:1px solid #CCC;}
+

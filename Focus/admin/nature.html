@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="../CSS/nature.css" type="text/css" rel="stylesheet">
+        <link href="../CSS/gonggong3.css" type="text/css" rel="stylesheet">
+        <link rel="Shortcut Icon" href="../images/1.jpg" />
+        <title>自然</title>
+    </head>
+    <body>
+    <div class="top">
+    <center><span>You are the best to the world</span></center>
+    </div>
+    <div class="logobar">
+        <a href="index1.html"><img src="../images/111.jpg" width="100px" height="80px" class="logobar_img"></a><span class="logobar_text">Focus</span>
+        <div class="user"></div>
+    </div>
+    <div class="nav_box">
+        <ul class="nav">
+            <a href="index1.html"><li class="nav_li"><center><span class="nav_text">首页</span></center></li></a>
+            <a href="personal.php"><li class="nav_li"><center><span class="nav_text">个人主页</span></center></li></a>
+            <!-- <a href="discuss.php"><li class="nav_li"><center><span class="nav_text">讨论区</span></center></li></a> -->
+            <a href="show.php"><li class="nav_li"><center><span class="nav_text">作品展示</span></center></li></a>
+            <a href="home.html"><li class="nav_li"><center><span class="nav_text">人物</span></center></li></a>
+            <a href="city.html"><li class="nav_li"><center><span class="nav_text">城市</span></center></li></a>
+            <a href="nature.html"><li class="nav_li" style="background-color:#D00355;"><center><span class="nav_text">自然</span></center></li></a>
+            <a href="sheying.html"><li class="nav_li"><center><span class="nav_text">摄影名人</span></center></li></a>
+        </ul>
+    </div>
+    <br/>
+    <div class="div1">
+        <hr style="background-color:#D00355;height:1px;border:none;margin-top:30px">
+        <center><span class="tit">自 &nbsp;然</span></center>
+        <hr style="background-color:#D00355;height:1.5px;border:none">
+        <div class="div_sm1">
+            <img src="../images/zi01.jpg" class="img01">
+            <div class="border1">
+                <span>风 车 windmill</span>
+            </div>
+        </div>
+        <div class="div_sm2">
+            <img src="../images/zi03.jpg" class="img02">
+            <div class="border2">
+                <span>胡泊 lakes</span>
+            </div>
+        </div>
+        <div class="div_sm3">
+            <img src="../images/zi04.jpg" class="img03">
+            <div class="border3">
+                <span>雪山 mountain</span>
+            </div>
+        </div>
+        <div class="div_sm4">
+            <img src="../images/zi05.jpg" class="img04">
+            <div class="border4">
+                <span>闪电 lightning</span>
+            </div>
+        </div>
+    </div>
+    <div class="div2">
+    <span class="div2_tit">A&nbsp; B&nbsp; O&nbsp; U&nbsp; T</span>
+    <div class="shang">
+        <span><br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;池塘生春草,<br/>&nbsp;&nbsp;&nbsp;&nbsp;园柳变鸣禽。</span>
+    </div>
+    <div class="zuo">
+       <span><br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;林花扫更落,<br/>&nbsp;&nbsp;&nbsp;&nbsp;径草踏还生。</span>
+    </div>
+    <div class="zhong"></div>
+    <div class="xia">
+        <span><br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;阳春布德泽,<br/>&nbsp;&nbsp;&nbsp;&nbsp;万物生光辉。</span>
+    </div>
+    <div class="you">
+        <span><br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;道由白云尽,<br/>&nbsp;&nbsp;&nbsp;&nbsp;春与青溪长。</span>
+    </div>
+    </div>
+
+    <div class="jian">
+             <span><img src="imgs/26.jpg" height="30px" width="30px" alt="" onclick="Topfun()" /></span>
+    </div>
+    <script type="text/javascript">
+     var four;
+
+    function Topfun(){
+        four=setInterval(Fourby,10);    
+    }
+    function Fourby(eachHeight){
+      if(document.documentElement && document.documentElement.scrollTop)  //IE
+        {
+            if(document.documentElement.scrollTop<=0){
+                clearInterval(four);
+            }else{
+                window.scrollBy(0,-30);
+            }
+          }else{          //Chrome不支持documentElement.scrollTop
+            if(document.body.scrollTop<=0){
+                clearInterval(four);
+            }else{
+                window.scrollBy(0,-30);
+            }
+        }
+    }
+ </script>
+    </body>
+</html>

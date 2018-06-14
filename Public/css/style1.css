@@ -1,0 +1,273 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif; background: #EFFCFE;
+}
+
+/*导航栏*/
+.header_bar{
+	background:#266097;
+	height:135px;
+	text-align: center;
+    line-height:130px;
+}
+.logo_bar{
+    display:inline-block;
+    padding-top:30px;
+}
+h1,h2{
+	display:inline-block;
+}
+h1{
+	font-size:53px;
+	color:#fff;
+}
+h2{
+	color:#333333;
+	padding-left:10px;
+}
+/*用户登录*/
+.login_bar{
+	width:550px; 
+	margin:70px auto; 
+	border:#999 solid 1px;
+	/*padding:20px;*/
+}
+.login_bar .container{
+	padding:50px 60px 10px 60px;
+}
+.login_input{
+	width:270px; 
+	float:left;
+}
+.login_auto{
+	margin-top:-20px;
+}
+.submit{
+	margin-bottom:30px;
+}
+.login_btn{
+	width:270px; 
+	height:36px;
+	color:#595959;
+	background:url(Image/btn.png) bottom right;
+	border:1px solid #B3B3B3;
+	margin:20px auto auto 95px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.login_btn:hover{
+	border-color:#8E8E8E;
+	box-shadow:1px 1px 1px #999999;
+}
+.reg{
+	float:right; 
+	margin-top:20px;
+}
+/*创建信息*/
+.regist{
+	width:628px; 
+	margin:10px auto; 
+	border:#999 solid 1px;
+}
+.container{
+	padding:36px 76px 20px 76px;
+}
+.reg_box{
+	list-style:none;
+}
+.reg_li{
+	height:70px; 
+	vertical-align:top;
+}
+.reg_span{
+	font:14px/34px "微软雅黑"; 
+	width:95px; 
+	text-align:right; 
+	float:left;
+	padding-right:3px;
+}
+.reg_redio{
+	padding-top:6px;
+}
+.reg_input{
+	width:306px; 
+	float:left;
+}
+.reg_text{
+	height:125px;
+}
+.reg_text textarea{
+	resize:none;
+}
+.input{
+	border:1px solid #999; 
+	height:32px; 
+	line-height:32px\9; 
+	text-indent:5px; 
+	width:100%;
+}
+.reg_auto{
+	height:40px; 
+	padding-bottom:15px;
+}
+.reg_btn{
+	width:309px; 
+	height:36px;
+	color:#595959;
+	background:url(Image/btn.png) bottom right;
+	border:1px solid #B3B3B3;
+	margin:20px auto auto 95px;
+}
+.reg_btn:hover{
+	border-color:#8E8E8E;
+	box-shadow:1px 1px 1px #999999;
+}
+/**年级选择**/
+#grades{
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    padding: 3px;
+    margin-left:10px;
+    width:95px;
+    vertical-align: middle;
+}
+/**end**/
+
+/*展示信息*/
+
+#sett{
+    width:117px;
+    height:32px;
+    border-radius:3px;
+    float:right;
+    background:url(Image/btn.png) bottom right;
+   /* margin-top:100px;*/
+    margin-right:10px;
+    font-size:15px;
+    color:#595959;
+    text-align: center;
+    border:1px solid #B3B3B3;
+}
+#sett:hover{
+    border-color:#8E8E8E;
+    box-shadow:1px 1px 1px #999999;
+}
+/*页面底部*/
+.footer{
+	background:#202020;
+	height:160px;
+	padding-top:30px;
+	padding-bottom:15px;
+}
+/*.foot_p*/ a{
+	font-size:13px;
+	color:#959595;
+	text-decoration:none;
+}
+.footer h5,p{
+	text-align:center;
+	line-height:30px;	
+	color:#959595;
+}
+/*信息展示新增*/
+#container{
+    width:100%;
+    margin:20px auto;
+   
+}
+.head-header{
+    width:800px;
+    margin:0 auto;
+     letter-spacing: 1px;
+}
+#grade{
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #555555;
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
+    padding: 3px;
+    vertical-align: middle;
+}
+.search{
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #555555;
+    display: inline-block;
+    font-size: 17px;
+    height: 30px;
+    padding: 3px;
+    vertical-align: middle;
+}
+.search:hover{
+     cursor: pointer;
+     box-shadow: 3px 3px 4px #ccc;
+}
+#sett:hover{
+    cursor:pointer;
+}
+.search-text{
+    border:1px solid #ccc;
+    border-radius: 3px;
+    color:#555;
+    display:inline-block;
+    height:28px;
+    width:100px;
+}
+.span{
+    font-size: 17px;
+    color:#333;
+    vertical-align: middle;
+}
+
+.head-main{
+    width:780px;
+    margin:0 auto;
+    margin-top:30px;
+    
+}
+.message{
+    border:1px solid #ccc;
+    padding-bottom:40px;
+    padding-top:20px;
+    width:750px;
+}
+.message1{
+    width:200px;
+    float:left;
+    margin-bottom:5px;
+}
+.message2{
+    width:750px;
+    clear:both;
+    margin-bottom:5px;
+}
+.show1{
+    width:750px;
+
+}
+/**退出按钮**/
+#drops{
+    width:117px;
+    float:right;
+    height:32px;
+    margin-right:10px;
+    font-size:16px;
+    color:#595959;
+    text-align: center;
+    border:0px;
+}
+#drops:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+/**end**/

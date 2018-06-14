@@ -1,0 +1,711 @@
+/* 
+* @Author: anchen
+* @Date:   2017-12-07 11:10:31
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-12-09 01:39:54
+*/
+a:hover, a:focus { text-decoration: none; }
+a:hover {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.margin-b-30 { margin-bottom: 30px; }
+
+/*
+ * 
+ */
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    
+    /* IE10+ CSS styles go here */
+    
+    .main-body { background-attachment: scroll; }
+}
+.Personal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #F1F1F1;
+}
+.TOPbar{
+    width: 100%;
+    height: 60px;
+    background: black;
+    position: fixed;
+    z-index: 5; 
+    
+}
+.TOP-bar{
+    width:100%;
+    height: 60px;
+    /*background: yellow;*/
+    margin: 0 auto;
+    position: relative;
+    z-index: 5 ;
+}
+.TOP-logo {
+    width: 90px;
+    height: 60px;
+    margin-left: 20px;
+    float:left;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 5;
+}
+.TOP-logo img{
+    width:90px;
+    height: 60px;
+    z-index: 5;
+}
+
+
+/*右边菜单*/
+
+.menu {
+  position: fixed;
+  top: 4px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 250ms ease;
+  cursor: pointer;
+  z-index: 200;
+}
+.menu span {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+  float: left;
+  transform-origin: center center;
+  transition: transform 250ms ease;
+  z-index: 200;
+}
+.menu span:nth-of-type(1) {
+  transform: translateY(-5px);
+}
+.menu span:nth-of-type(3) {
+  transform: translateY(5px);
+}
+
+#menu {
+  display: none;
+}
+#menu:checked ~ .menu {
+  background-color: transparent;
+  transform: rotate(360deg);
+  transition: transform 250ms ease;
+}
+#menu:checked ~ .menu span {
+  background-color: white;
+  transition: transform 250ms ease;
+}
+#menu:checked ~ .menu span:nth-of-type(1) {
+  transform: translateY(1px) rotate(45deg);
+}
+#menu:checked ~ .menu span:nth-of-type(2) {
+  display: none;
+}
+#menu:checked ~ .menu span:nth-of-type(3) {
+  transform: translateY(-1px) rotate(-45deg);
+}
+#menu:checked ~ .nav {
+  right: 0px;
+  transition: right 500ms ease;
+}
+#menu:checked ~ main {
+  transform: translateX(250px);
+  transition: transform 500ms ease;
+}
+
+.nav {
+  position: fixed;
+  top: 9.5%;
+  /*right: -300px;
+  width: 300px;*/
+  right: -30%;
+  width: 20%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #444;
+  opacity: 0.9;
+  transition: left 500ms ease;
+  z-index: 0;
+}
+.nav ul {
+  position: relative;
+  list-style-type: none;
+  margin: 15% 0;
+  padding: 0;
+}
+.nav ul li {
+  position: relative;
+  display: block;
+  border-bottom: 1px dashed rgba(255,255,255,.38);
+}
+.nav ul li a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 15px 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav ul li a:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  transition: width 250ms ease;
+  z-index: -1;
+}
+.nav ul li a:hover {
+  color: #444;
+}
+.nav ul li a:hover:before {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: width 250ms ease;
+}
+
+
+
+/*头像信息部分*/
+.Main-info{
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    top: 60px;
+    background: #fff;
+}
+.info-contain{
+    width: 93%;
+    height: 80%;
+   /* background: yellow;*/
+    margin-left: 3.5%;
+    position: absolute;
+    top: 20%;
+}
+.info-contain2{
+    width: 100%;
+    height: 65%;
+    /*background: blue;*/
+}
+.info-contain-left{
+    width: 220px;
+    height: 100%;
+    background: white;
+    float: left;
+}
+.info-touxiang{
+    width: 100px;
+    height: 100%;
+    background: black;
+    border-radius: 3px;
+    float: left;
+}
+.info-touxiang img{
+    width: 100px;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.info-ziliao{
+    width: 100px;
+    height: 100%;
+    margin-left: 20px;
+    
+    float: left;
+}
+.info-ziliao-nick{
+    width: 100%;
+    height: 35%;
+    /*background: red;*/
+    font-size: 25px;
+    color: #444;
+    font-family: "微软雅黑";
+    /*text-align: center;*/
+    /*line-height: 160%;*/
+    letter-spacing: 2px;
+    font-weight: 500;
+
+}
+.info-dizhi{
+    width: 100%;
+    height: 20%;
+   /* background: yellow;*/
+    margin-top: 5px;
+    margin-bottom: 11px;
+}
+.info-dizhi-left{
+    width: 20px;
+    height: 20px;
+    
+    float: left;
+}
+.info-dizhi-left img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.info-dizhi-right{
+    float: left;
+}
+
+
+
+/*修改信息*/
+/*button{
+    outline: none;
+    border: none;
+    background: white;
+    margin-left: -5px;
+}*/
+.info-xiugai{
+    width: 85%;
+    height: 30px;
+    background: #444;
+   /* margin-top: 11px;*/
+    border-radius: 3px;
+    cursor: pointer;
+}
+.info-xiugai-img{
+    width: 24px;
+    height: 25px;
+    line-height: 30px;
+    float: left;
+}
+.info-xiugai-img img{
+    width: 24px;
+    height: 25px;
+    line-height: 30px;
+}
+.info-xiugai-ziliao{
+    width: 55px;
+    height: 100%;
+    font-size: 13px;
+    color: #fff;
+    float: left;
+    margin-left: 3px;
+    line-height: 30px;
+}
+
+
+
+
+
+/*修改信息右边*/
+.info-contain-right{
+    width: 220px;
+    height: 120%;
+    background: white;
+    float: right;
+    margin-right: 20px;
+}
+.info-contain-right img{
+     width: 20px;
+    height: 20px;
+
+}
+.info-zuopin{
+    width: 100%;
+    height: 30px;
+    /*background: red;*/
+}
+.info-zuopin-img{
+    width: 20px;
+    height: 20px;
+    padding-top: 3px;
+    float: left;
+}
+.info-zuopin-img img{
+    width: 20px;
+    height: 20px;
+
+}
+.info-zuopin-text{
+    width: 80px;
+    height: 100%;
+    
+    float: left;
+    margin-left: 10px;
+    line-height: 30px;
+
+}
+.num{
+    color:#0DC316 ;
+    font-size: 30px;
+    line-height: 30px;
+}
+/*粉丝*/
+.info-fensi{
+     width: 100%;
+    height: 30px;
+   
+}
+.info-fensi-img  {
+    width: 20px;
+    height: 20px;
+    padding-top: 3px;
+    float: left;
+}
+.info-fensi-text {
+    width: 80px;
+    height: 100%;
+    
+    float: left;
+    margin-left: 10px;
+    line-height: 30px;
+}
+.info-guanzhu{
+    width: 100%;
+    height: 30px;
+    
+}
+.info-guanzhu-img  {
+    width: 20px;
+    height: 20px;
+    padding-top: 3px;
+    float: left;
+}
+.info-guanzhu-text {
+    width: 80px;
+    height: 100%;
+    /*background: black;*/
+    float: left;
+    margin-left: 10px;
+    line-height: 30px;
+}
+
+
+
+.info-contain3{
+    width: 100%;
+    height: 28%;
+   /* background: red;*/
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: "微软雅黑";
+    text-align: center; 
+}
+.zuopin{
+    width: 100px;
+    height: 100%;
+    margin-left: 130px;
+    float: left;
+    /*background: yellow;*/
+    cursor: pointer;
+    border-bottom: 3px solid #d00355;
+}
+/*.zuopin:hover{
+   border-bottom: 3px solid #d00355;
+}*/
+.shoucang{
+    width: 100px;
+    height: 100%;
+    margin-left: 70px;
+    float: left;
+    /* background: yellow; */
+    cursor: pointer;
+}
+.shoucang:hover{
+   border-bottom: 3px solid #d00355;
+}
+
+
+
+
+/*中间*/
+.Personal-Center{
+    width: 100%;
+    /*height: 100%;*/
+    /*background: yellow;*/
+    position: absolute;
+    top: 47%;
+    left: 0px;
+    background: #F1F1F1;
+
+}
+.Center-Left{
+    width: 60%;
+    height: 490px;
+   /* height:80%;*/
+    float: left;
+}
+.one{
+    width: 30%;
+    height: 240px;
+    /*background: blue;*/
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.one-img{
+  width: 97%;
+  height: 160px;
+  margin:1.5% auto;
+  background: black;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.one-img img{
+  width: 100%;
+  height: 160px;
+  transition:all 1.5s ease-in-out;
+}
+.one-img .slip{
+  width: 100%;
+  height: 50px;
+  background: #444;
+  opacity: 0.6;
+  font-size: 16px;
+  color: #fff;
+  /*display: none;*/
+  transition:all 1.0s ease-in-out;
+  transform:translateY(50px);
+  text-align: center;
+  font-family: "微软雅黑";
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+.one-img:hover .slip{
+  /*display: block;*/
+  transition:all 1.0s ease-in-out;
+  transform:translateY(-50px);
+}
+.one-img img:hover{
+  transition:all 1.0s ease-in-out;
+  transform:scale(1.2);
+  overflow: hidden;
+}
+.one-text{
+  width: 97%;
+  height: 66px;
+  /*background: red;*/
+  margin:0 auto 1.5%;
+}
+.Center-Right{
+    width: 40%;
+    height: 80%;
+    float:right;
+    /*background: red;*/
+}
+.me-guanzhu{
+  width: 80%;
+  height: 100%;
+  margin-left: 80px;
+  /*background: red;*/
+}
+.me-guanzhu h3{
+  display: block;
+  margin-left: 24px;
+}
+.list1{
+  width: 100px;
+  height: 100px;
+  /*background: yellow;*/
+  margin-left: 15px;
+  margin-top: 10px;
+  float: left;
+}
+
+.list1-touxiang{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 20px;
+  transition:all 1.0s ease-in-out;
+  cursor:pointer;
+
+}
+.list1-touxiang:hover{
+  transition:transform 1.0s ease-in-out;
+  transform:rotate(20deg);
+  opacity: 0.8;
+}
+.list1-touxiang img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.list1-text{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  margin-top: 9px;
+}
+
+
+
+
+/*留言*/
+.Personal-Message{
+  width: 100%;
+  position: absolute;
+  top: 140%;
+  /*margin-top: 200px;*/
+}
+.Contact{
+  width: 100%;
+ /* background: red;*/
+  /*height: 100%;*/
+  margin-top:0px;
+  /*position: static;*/
+  /*top: 501px;*/
+  position:absolute;
+
+}
+.Contact-body{
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+/*  background: yellow;*/
+}
+.Contact-body .Contact-body-Top{
+  width: 40%;
+  height: 110px;
+  background: white;
+  margin: 0 auto;
+  font-size: 40px;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  line-height: 70px;
+  text-align: center;
+}
+.Contact .Contact-body .xuxian2{
+  width: 30%;
+  height: 0;
+  border: 1px dashed #ccc;
+  position: absolute;
+  left: 35%;
+  
+}
+.Contact-body-Top p{
+  font-size:14px;
+  margin-top: -8px;
+  color: #44c7f4;
+  letter-spacing: 7px;
+  font-family: pen'O Sans', sans-serif;
+  font-weight: normal;
+}
+.Contact-body .Contact-contain1{
+  width: 100%;
+  height: 300px;
+ /* background: black;*/
+  margin-top: 30px;
+}
+.Contact-contain1 .Contact-contain2{
+  width: 85%;
+  height: 100%;
+ /* background: blue;*/
+  margin:0 auto;
+}
+.Contact-contain2 .Contact-contain-left{
+  width: 50%;
+  height: 100%;
+  /*background: white;*/
+  float: left;
+}
+.Contact-contain-left input{
+  width: 95%;
+  height: 50px;
+  /*background: red;*/
+  border: 1px solid #ccc;
+ font-size: 16px;
+ text-indent: 5px;
+}
+
+#input2{
+  margin-top: 50px;
+}
+.Contact-contain2 .Contact-contain-right{
+  width: 50%;
+  height: 105%;
+  /*background: red;*/
+  float: left;
+}
+.Contact-contain-right textarea{
+  width: 95%;
+  height: 250px;
+  border: 1px solid #ccc;
+  float: right;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  text-indent: 20px;
+  /*line-height: 10px;*/
+  margin: 0 auto;
+}
+input,textarea:active{
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px #ccc;
+}
+input:focus{
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px #ccc;
+}
+textarea:focus{
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px #ccc;
+}
+.Contact-contain-right .btn{
+  width: 95%;
+  height: 70px;
+  margin-top: 20px;
+  float: right;
+}
+.Contact-contain-right button{
+  width: 100%; 
+  height: 40px;
+  float: right;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: #fff;
+  background: #ccc;
+  outline: none;
+  border: none;
+  color: white;
+  font:24px/1em 'Droid Sans', sans-serif;
+  display:        inline-block;
+  box-shadow: 4px 4px 2px #ccc;
+  -webkit-transition:all 0.08 ease-in-out;
+  transition:all 0.08 ease-in-out;
+ 
+}
+.button:before {
+  font:       1.2em/0 'Pictos', sans-serif;
+}
+.button:active {
+ -webkit-transform:  translateY(.2em);
+  -moz-transform:   translateY(.2em);
+  transform:      translateY(.2em);
+}
+button:hover{
+  cursor: pointer;
+  background: black;
+  color: #fff;
+  -webkit-transition:all 0.08 ease-in-out;
+  transition:all 0.08 ease-in-out;
+}
+
+.jian span{ position:absolute; top:90%; right:2%; z-index:50; position:fixed;}
+.jian img{ opacity:0.8; border:1px solid #CCC;}

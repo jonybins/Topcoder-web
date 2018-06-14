@@ -1,0 +1,733 @@
+/* 
+* @Author: anchen
+* @Date:   2017-11-20 20:31:37
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-01-10 08:19:48
+*/
+/* 
+* @Author: anchen
+* @Date:   2017-11-08 14:01:34
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-11-20 20:31:26
+*/
+html,body{
+    width: 100%;
+    height: 100%;
+    position:absolute; top:0; left:0;
+    overflow: hidden;
+    font-size: 16px;
+    color: #000;
+
+}
+
+.left-list{
+    width:18%;
+    height: 100%;
+    position:absolute;
+    background:url(../images/menu_pattern_1.png);
+    /*z-index: 1;*/
+    float: left;
+}
+.left-top{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    /*z-index: 1;*/
+    
+}
+.left-top img{
+    width: 120px;
+    height: 90px;
+    margin-top: 28px;
+    cursor: pointer;
+}
+
+
+
+.left-middle{
+    width: 100%;
+    height: 328px;
+    /*background: blue;*/
+    position: absolute;
+    top:170px;
+    left: 0px;
+    /*****************************************有问题去掉z-index后侧边动画****************************************/
+    /*z-index: 1;*/
+}
+.left-middle-contain{
+    width: 93%;
+    height: 328px;
+   
+    float: right;
+    position: relative;
+}
+.containindex{
+    position: relative;
+    z-index: 1;
+}
+.contain{
+    width: 106%;
+    height: 35px;
+    line-height: 35px;
+    font-family: "PT Sans Caption";
+    font-size: 12px;
+    color: #777777;
+    margin-bottom: 1px;
+    position: relative;
+    /*z-index: 10;*/
+}
+.contain a{
+    color: #777;
+    font-size: 14px;
+}
+.contain a:hover{
+    text-decoration: none;
+}
+.containb{
+    width: 100%;
+    height: 35px;
+    background: #D00355;
+    transform:translate(215px);
+    transition:all 0.50s;/*鼠标移开时的缓慢动作*/
+    z-index: 1;
+    position: absolute;
+    visibility:hidden;
+    /*加上定位之后这里的z-index:-3;才有效果*/
+}
+
+.contain:hover .containb{/*hover前面的冒号和前面的类名之间不能有空格*/
+    transform:translate(0px);
+    transition:all 0.5s;
+    visibility:visible;
+}
+.contain:hover a{
+    color: white;
+    transition:all 0.5s;
+    
+}
+.contain a{
+    display: block;
+    position: absolute;
+    left:10px;
+    z-index: 2;
+}
+
+/*右拉菜单*/
+.contain-rightpull-menu{
+    width: 200px;
+    background: black;
+    margin-left: 100%;
+    position: relative;
+    z-index: 10; 
+    visibility: hidden;
+    
+}
+.contain-rightpull-show1{
+    
+    /*height: 107px;*/
+    height: 142px;
+}
+.right-pull-menu{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-family: "PT Sans Caption";
+    font-size: 12px;
+    color: #777777;
+    margin-bottom: 1px;
+}
+.right-pull-menu a{
+    display: block;
+    margin-left: 12px;
+    color: #000;
+}
+.contain-one-wo:hover .contain-rightpull-menu{
+    visibility: visible;
+}
+.menu-0:hover{
+    background:#D00355;
+    transition:1s;
+}
+.menu-2:hover{
+    background:#D00355;
+    transition:1s;
+}
+.menu-1:hover{
+    background:#D00355;
+    transition:1s;
+}
+.menu-3:hover{
+    background:#D00355;
+    transition:1s;
+}
+/*作品展示右拉*/
+.contain-rightpull-show2{
+    height: 107px;
+}
+.contain-two-zhanshi:hover .contain-rightpull-menu{
+    visibility: visible;
+}
+
+
+/*音乐插入*/
+
+
+/*.left-down{
+    width: 100%;
+    height: 80px;
+    background: white;
+    opacity: 0.2;
+    position: absolute;
+    top: 510px;
+    left:0px;
+    z-index: 2;
+}
+.left-down audio{
+    width: 100%;
+    height: 80px;
+    background: white;
+}
+*/
+/*对音乐播放器的设置*/
+        /*#wrapper
+        {
+            width: 30em;  480 
+            height: 8.75em; 140
+            position: absolute;
+            z-index:1000;
+        }*/
+        
+/*对音乐播放器的设置*/
+        #wrapper
+        {
+           
+            width: 19.6em;  /*480*/ 
+            height: 8.75em; /*140*/
+            position: absolute;
+            top: 50%;
+            left: 62%;
+            margin: 15em 0 0 -10em; /* 70 240 */
+        }
+        .audioplayer
+        {
+            width:80%;
+            height: 2.5em; /* 40 */
+            color: #fff;
+            text-shadow: 1px 1px 0 #000;
+            border: 1px solid #222;
+            position: relative;
+            z-index: 1;
+            background:url(../images/menu_pattern_1.png);
+        }
+            
+            .audioplayer > div
+            {
+                position: absolute;
+            }
+            .audioplayer-playpause
+            {
+                width: 2.0em; /* 40 */
+                height: 100%;
+                text-align: left;
+                text-indent: -9999px;
+                cursor: pointer;
+                z-index: 2;
+                top: 0;
+                left: 0;
+            }   
+            .audioplayer-stopped .audioplayer-playpause a
+                {
+                    width: 0;
+                    height: 0;
+                    border: 0.5em solid transparent; /* 8 */
+                    border-right: none;
+                    border-left-color: #fff;
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: -0.5em 0 0 -0.25em; /* 8 4 */
+                }
+                .audioplayer-playing .audioplayer-playpause a
+                {
+                    width: 0.75em; /* 12 */
+                    height: 0.75em; /* 12 */
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: -0.375em 0 0 -0.375em; /* 6 */
+                }
+
+                    .audioplayer-playing .audioplayer-playpause a:before,
+                    .audioplayer-playing .audioplayer-playpause a:after
+                    {
+                        width: 40%;
+                        height: 100%;
+                        background-color: #fff;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                    }
+                    .audioplayer-playing .audioplayer-playpause a:before
+                    {
+                        left: 0;
+                    }
+                    .audioplayer-playing .audioplayer-playpause a:after
+                    {
+                        right: 0;
+                    }
+                .audioplayer-time-current
+                {
+                    border-left: 1px solid #111;
+                    border-left-color: rgba( 0, 0, 0, .25 );
+                    left: 2.0em; /* 40 */
+                    top:10px;
+                }
+                .audioplayer-time-duration
+                {
+                    border-right: 1px solid #555;
+                    border-right-color: rgba( 255, 255, 255, .1 );
+                    /*right: 2.5em;*/ /* 40 */
+                    right: 1.0em;
+                    top: 10px;
+
+                }
+
+            .audioplayer-bar
+            {
+                width: 38%;
+                height: 0.875em; /* 14 */
+                background-color: #222;
+                cursor: pointer;
+                z-index: 1;
+                top: 50%;
+                right: 6.875em; /* 110 */
+                left: 5.2em; /* 110 */
+                margin-top: -0.438em; /* 7 */
+            }
+                .audioplayer-bar div
+                {
+                    width: 0;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                .audioplayer-bar-played
+                {
+                    background: #007fd1;
+                    z-index: 2;
+                }
+            /*.audioplayer-playpause,
+            .audioplayer-volume a
+            {
+                filter: drop-shadow( 1px 1px 0 #000 );
+            }    可以将按键设置为渐变色   */  
+            .audioplayer-bar-played
+            {
+                background: linear-gradient( to right, #007fd1, #c600ff );
+            }
+            .audioplayer-volume-adjust div div
+            {
+                background: linear-gradient( to top, #007fd1, #c600ff );
+            }
+            
+
+
+
+
+/*菜单列表右边的长条*/
+.menu-background{
+    width: 1%;
+    /*height: 614px;*/
+    height:100%;
+    position:absolute;
+    background:#D00355;
+    z-index: -1;
+    float: left;
+   /* position: relative;*/
+   margin-left:18%;
+}
+.menu-iconarrow{
+    width: 15px;
+    height: 24px;
+    float: left;
+    margin-top: 60px;
+    background:#D00355; 
+    z-index:4;
+}
+.menu-iconarrow button{
+    width: 15px;
+    height: 24px;
+    background:#D00355; 
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    position: absolute;/*给这来个定位会让这个小按钮出现在图片上*/
+    z-index:10;
+}
+/*制作箭头*/
+.btn:after{
+    content: '';
+    display: inline-block;
+    margin-left: -5px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    z-index: 4;
+    position:relative;
+}
+/*右边部分*/
+#right-roll{
+    width: 81%;
+    /*height: 614px;*/
+    height:100%;
+    overflow: hidden;
+    /*position: relative;*/
+    position:absolute;
+    float: left;
+    margin-top: 0px;
+    margin-left:19%;
+    z-index: 6;
+}
+/*#right-contain-img{
+    width: 500%;
+    height: 614px;
+    position: absolute;
+}*/
+#right-roll.right-contain-img{
+    width: 100%;
+    height: 614px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.right-contain-img .right-img1{
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*background-size: 40% 100%;*/
+        -moz-background-size: cover;
+        background-size: cover;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.8s linear;
+        -webkit-transition: opacity 0.8s linear;
+        
+        background-repeat: no-repeat;
+        float: left;
+
+        
+      
+}
+
+.right-contain-img .active {
+        opacity: 1;
+        
+       
+    }
+
+#prev:after{
+    content:"";
+    border-top: 2px solid #D00355;
+    border-left: 2px solid #D00355;
+    -webkit-transform:rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    position: absolute;
+    top: 270px;
+    left: 10px;
+    z-index: 3;
+}
+#next:before{
+    content:"";
+    width: 20px;
+   height: 20px;
+    float: right;
+    background: red;
+    position: absolute;
+    top: 270px;
+    right: 10px;
+    background: transparent;
+    border-top: 2px solid #D00355;
+    border-right: 2px solid #D00355;
+    -webkit-transform:rotate(45deg);
+    z-index: 3;
+}
+
+
+.right-contain-button{
+    width: 230px;
+    height: 20px;
+    position: absolute;
+    bottom: 8%;
+    left: 42%;
+    line-height: 18px;
+    z-index: 11;
+}
+.right-contain-button span{
+    display: block;
+    width: 23px;
+    height: 23px;
+    border: 1px solid black;
+    color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    line-height: 21px;
+}
+.right-contain-button span:hover{
+    cursor: pointer;
+}
+.right-contain-button span.active {
+    background: #D00355;
+}
+.title {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+}
+
+.title p {
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 0;
+    margin: 0;
+    text-indent: 0px;
+    /*width: 300px;*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.7;
+    transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    transition: all 0.8s ease-out;
+    -webkit-transition: all 0.8s ease-out;
+    }
+    
+.title p.active {
+
+    opacity: 0.6;
+    transform: translateX(440px);
+    -webkit-transform: translateX(440px);
+}
+.title p:hover{
+    cursor: pointer;
+}
+
+#div1{ 
+       height:75%;
+       width:61%; 
+       position:absolute; top:15%; left:29%; 
+       background:url(../images/menu_pattern_1.png); 
+       z-index:7; 
+       /*opacity:0.8;*/
+       display:none;
+       position: relative;
+}
+.biaoti{
+    width: 100%;
+    height: 15%;
+    /*background: red;*/
+    position: absolute;
+    top:0px;
+    left: 0px;
+    border-bottom: 3px solid #D00355;
+}
+.biaoti .biaoti-content{
+    width: 85%;
+    height: 100%;
+    /*background: yellow;*/
+    margin: 0 auto;
+    /*border-bottom: 3px solid #D00355;*/
+    font-size:30px;
+    font-family:"楷体";
+    position: relative;
+}
+.xinxi{
+    width: 20%;
+    height: 57%;
+    line-height: 98%;
+    background: blue; 
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    padding-bottom: 3px;
+
+    text-align: center;
+    border-left: 3px solid #D00355;
+    border-top:3px solid #D00355;
+     border-right:3px solid #D00355;
+     border-radius:8px 8px 0px 0px;
+    z-index: 10;
+    background: #000;
+    
+    float:left;
+}
+.xiugai{
+   width: 20%;
+    height: 57%;
+    position: absolute;
+    bottom: -3px;
+    left: 26%;
+   
+}
+
+#neirong{
+    height:70%;
+    width:57%;
+    position:absolute; top:21%; left:23%;
+    border:2px solid #D00355;
+    /*background:url(../images/6.jpg);*/
+}
+#neirong ul{
+    margin-top:55px;
+    margin-left:100px;
+}
+#neirong li{
+    margin-top:30px;
+}
+#neirong span{
+    color:#FFF;
+    font-size:24px;
+    font-family:"楷体";
+    line-height:30px;
+    font-weight:bold;
+    text-align:center;
+}
+#neirong .input1{
+    height:32px;
+    width:150px;
+    color:#FFF;
+    border:1px solid #D00355;
+    background:none;
+    text-align:center;
+}
+.yan{
+    height:32px;
+    width:80px;
+    font-size:20px;
+    color:#FFF;
+    text-align:center;
+    line-height:32px;
+    position:absolute; left:44.6%; top:57%;
+    border:1px solid #D00355;
+    background:none;
+}
+#btn{
+    height:40px;
+    width:150px;
+    font-size:24px;
+    font-family:"楷体";
+    border:2px solid #D00355;
+    border-radius:5px;
+    background:none;
+    color:#FFF;
+    position:absolute; top:200px; left:50px;
+}
+
+
+
+#div2{ height:75%;
+       width:61%; 
+       position:absolute; top:15%; left:29%; 
+       background:url(../images/menu_pattern_1.png); 
+       z-index:7; 
+       
+       display:none;
+}
+.biaoti1{
+    height:35px;
+    width:94%;
+    margin-top:30px;
+    margin-left:1px;
+   /* margin-bottom:50px;*/
+    font-size:30px;
+    font-family:"楷体";
+    padding-left:50px;
+    float:left;
+    border-bottom:3px solid #D00355;
+}
+.xiugai1{
+    height:35px;
+    width:135px;
+    text-align:center;
+    border-top:3px solid #D00355;
+    border-left:3px solid #D00355;
+    border-right:3px solid #D00355;
+    border-radius:8px 8px 0px 0px;
+    background-color:#000;
+    float:left;
+}
+.xinxi1{
+    height:30px;
+    width:135px;
+    text-align:center;
+    float:left;
+}
+
+
+#zhunei{
+    height:70%;
+    width:57%;
+    position:absolute; top:21%; left:23%;
+    border:2px solid #D00355;
+    /*background:url(../images/6.jpg);*/
+}
+#zhunei ul{
+    /*margin-top:70px;*/
+    margin-top: 55px;
+    margin-left:110px;
+}
+#zhunei li{
+    margin-top:25px;
+}
+#zhunei span{
+    color:#FFF;
+    font-size:24px;
+    font-family:"楷体";
+    line-height:30px;
+    font-weight:bold;
+    text-align:center;
+}
+#zhunei input{
+    height:32px;
+    width:150px;
+    color:#FFF;
+    text-align:center;
+    border:1px solid #D00355;
+    background:none;
+}
+#btn{
+    height:40px;
+    width:150px;
+    font-size:24px;
+    font-family:"楷体";
+    border:3px solid #D00355;
+    background:none;
+    color:#FFF;
+    margin-top:60px;
+    margin-left:120px;
+}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+/* QQbox */
+*html,*html body{background-image:url(about:blank);background-attachment:fixed;}
+*html .QQbox{position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+.QQbox{z-index:99;width:196px;left:-162px;top:100px;position:fixed;margin:100px 0 0 0;}
+.QQbox .Qlist{width:196px;background:#000;height:232px;display:block;overflow:hidden;zoom:1;}
+.QQbox .Qlist .con{padding-top:58px;padding-right:-10px;padding-bottom:10px;padding-left:40px;color:#CCCCCC;font-size:14px;}
+.QQbox .Qlist .con ul li{height:33px;line-height:33px;list-style:disc;}
+.QQbox .Qlist .con ul li a{font-size:14px;color:#CCCCCC;text-decoration:none;}
+.QQbox .Qlist .con ul li a:hover{font-size:14px;color:#CCCCCC;text-decoration:none;}
+.OnlineLeft{float:left;display:inline;width:262px;overflow:hidden;zoom:1;}
+.OnlineBtn{float:right;margin:-120px 0 0;display:inline;width:30px;height:96px;color:#fff;}
